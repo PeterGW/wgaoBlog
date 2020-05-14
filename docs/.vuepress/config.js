@@ -1,3 +1,5 @@
+const slider = require('./configs/slider');
+
 module.exports = {
     base: '/',
     title: 'My Docs',
@@ -14,11 +16,7 @@ module.exports = {
             {text: 'about', link: '/algorithm/'},
             {text: 'github', link: 'https://baidu.com'}      
         ],
-    //     sidebar: 'auto', // 侧边栏配置
-    //     sidebarDepth: 2, // 侧边栏显示2级
         logo: '/assets/img/logo.png',
-        sidebar: [
-            '/',
-        ]
+        slider
     }
 }
