@@ -1,4 +1,4 @@
-export default slider = {
+module.exports = {
     '/views/' : [
         '',
         {
@@ -17,4 +17,4 @@ export default slider = {
             ]
         },
     ]
-}
+};

@@ -12,5 +12,8 @@
     "blog"
   ],
   "author": "wgao",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "yarn": "^1.22.4"
+  }
 }

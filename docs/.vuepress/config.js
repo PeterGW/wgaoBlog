@@ -1,4 +1,4 @@
-const slider = require('./configs/slider');
+const sidebar = require('./configs/slider');
 
 module.exports = {
     base: '/',
@@ -17,6 +17,6 @@ module.exports = {
             {text: 'github', link: 'https://baidu.com'}      
         ],
         logo: '/assets/img/logo.png',
-        slider
+        sidebar
     }
 }

@@ -8,5 +8,7 @@ tree-shaking的本质用于消除项目一些不必要的代码，早在编译�
 
 tree-shaking同样也是消除项目中不必要的代码，但是和DCE又有不同，DCE是一种实现，主要工作是用于模快间，在打包过程中抽出有用的部分。
 
-tree-shaking是依赖ES6模块静态分析的，ES6 module的特点如下：
-### 1. 只能作为模块顶层的语句出现
+**tree-shaking是依赖ES6模块静态分析的，ES6 module的特点如下：**
+- 1. 只能作为模块顶层的语句出现
+- 2. import 的模块名只能是字符串常量
+- 3. import binding 是 immutable的
