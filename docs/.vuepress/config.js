@@ -1,7 +1,7 @@
 const sidebar = require('./configs/slider');
 
 module.exports = {
-    base: '/',
+    base: '/wgaoBlog/',
     title: 'My Docs',
     description: 'Just playing around',
     head: [ // 注入到当前页面的 HTML <head> 中的标签

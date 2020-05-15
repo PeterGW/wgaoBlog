@@ -1,6 +1,6 @@
 ---
 home: true
-# heroImage: /assets/img/logo.png
+heroImage: /assets/img/logo.png
 heroImageStyle: {
   maxWidth: '800px',
   width: '100%',
