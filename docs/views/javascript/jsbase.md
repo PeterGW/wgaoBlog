@@ -1,11 +1,15 @@
 # JavaScript数据类型
 
-    基本数据类型：Undefined, Null, Boolean, String, Number, Symbol.
+    基本数据类型：Undefined, Null, Boolean, String, Number, Symbol, bigint
     引用数据类型：Object
 
 **检测数据类型的几种方式：**
 
 - typeof 不能细分是数组还是正则，对于对象数据类型中的所有值的返回的都是object
+
+string、number、undefined、boolean、symbol、bigint都能通过typeof(返回字符串形式)直接判断类型，还有对象类型function也可判断
+除了null无法通过typeof(为object)直接判断类型(历史遗留)，包括对象类型，typeof把null当作对象类型处理，所以typeof无法判断对象类型，typeof也能判断function
+
 - instance  只要在当前原型中可以找到的，都可以返回true
 - constructor  与instance相似，不过可以处理基本数据类型的检测，如number等
 

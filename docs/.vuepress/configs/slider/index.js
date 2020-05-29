@@ -2,10 +2,17 @@ module.exports = {
     '/views/' : [
         '',
         {
+            title:'面试篇',
+            collapsable: true,
+            children: [
+                'question/question',
+            ]
+        },
+        {
             title:'JavaScript篇',
             collapsable: true,
             children: [
-                'javascript/jingdu',
+                'javascript/jsbase',
                 'javascript/promise',
             ]
         },

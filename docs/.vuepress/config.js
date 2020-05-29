@@ -18,5 +18,7 @@ module.exports = {
         ],
         logo: '/assets/img/logo.png',
         sidebar
+    },
+    configureWebpack: (config, isServer) => {
     }
 }
