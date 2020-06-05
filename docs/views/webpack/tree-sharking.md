@@ -2,6 +2,8 @@
 
     所谓Tree-shaking就是把项目中没必要的模块全部抖掉，用于在不同的模块之间消除无用的代码。
 
+    个人理解：在ES6语法中import的使用 webpack4会默认使用tree-shaking来打包编译，算是一个优化点
+
 # Tree-shaking原理
 tree-shaking的本质用于消除项目一些不必要的代码，早在编译原理中有提到DCE(dead code eliminnation)，作用是消除不可能执行的代码，
 它的工作是使用编辑器判断出某些代码是不可能执行的，然后清除。
