@@ -23,7 +23,7 @@ class myPromise {
             //把resolve执行回调的操作封装成一个函数,放进setTimeout里,以兼容executor是同步代码的情况
             const run = () => {
                 // 对应状态只能是从pending到fulfilled或者rejected
-                if(this._status !== PENDING) return             
+                if(this._status !== PENDING) return
                 this._status = FULFILLED;   // 状态变更
                 this._value = val;          // 保存resolve返回的值
                 while(this._resolveQueue.length){
@@ -37,12 +37,12 @@ class myPromise {
         let _reject = (val) => {
             const run = () => {
                 // 对应状态只能是从pending到fulfilled或者rejected
-                if(this._status !== REJECTED) return                
+                if(this._status !== REJECTED) return
                 this._status = REJECTED;
                 this._value = val;
                 while(this._rejectQueue.length){
                     // 取出reject队列第一个 且传入val执行
-                    const callback = this._rejectQueue.shift();     
+                    const callback = this._rejectQueue.shift();
                     callback(val);
                 }
             }
@@ -51,12 +51,12 @@ class myPromise {
         executor(_resolve, _reject);                            // new Promise()时立即执行
     }
 
-    then(resolveFn, rejectFn){                 
+    then(resolveFn, rejectFn){
         // 值穿透问题
         // 根据规范，如果then的参数不是function，则我们需要忽略它, 让链式调用继续往下执行
         typeof resolveFn !== 'function' ? resolveFn = value => value : null
         typeof rejectFn !== 'function' ? rejectFn = error => error : null
-        
+
         return new Promiese((resolve, reject) => {              // then需要返回一个promise才可以链式调用
             const fulfilled = val => {
                 try {
@@ -66,7 +66,6 @@ class myPromise {
                     reject(e);
                 }
             }
-            
 
             const rejected = err => {
                 try {
@@ -76,8 +75,6 @@ class myPromise {
                     reject(e);
                 }
             }
-           
-
             switch(this._status) {
                 case PENDING:
                     this._resolveQueue.push(fulfilled);
@@ -102,7 +99,7 @@ class myPromise {
     finally(callback) {
         return this.then(
             // MyPromise.resolve执行回调,并在then中return结果传递给后面的Promise
-            value => MyPromise.resolve(callback()).then(() => value),             
+            value => MyPromise.resolve(callback()).then(() => value),
             reason => MyPromise.resolve(callback()).then(() => { throw reason })  // reject同理
         )
     }
@@ -174,7 +171,7 @@ async function Async2() {
     console.log('async2')
 }
 
-Async1() 
+Async1()
 
 new Promise(resolve => {
     console.log(2)
@@ -205,7 +202,7 @@ setTimeout(() => {
 console.log(10);
 ```
 ---
-#### console书出结果顺序： 
+#### console书出结果顺序：
     1,async2,2,10,async1,3,4,7,5,6,8,9
 
 **async/await实现：**
@@ -218,15 +215,15 @@ console.log(10);
 ```js
 function run(gen){
     return new Promise((resolve, reject) => {
-        var g = gen();                          
+        var g = gen();
         function step(val){                         // 封装方法，递归执行next
             try {                                   // 捕获异常
                 var res = g.next(val);              // 生成一个迭代器
             } catch(e) {
                 return reject(e);
-            }                 
+            }
             if(res.done) {                          // 判断是否最后一步
-                return resolve(res.value);      
+                return resolve(res.value);
             }
             Promise.resolve(res.value).then(        // res.value封装成promise
                 val => {
