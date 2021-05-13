@@ -44,12 +44,12 @@ isShowComments: true
 			return {
                 changeTime: '2000',
 				index: 2,
-				imgSrc: '/znote/view/比心1.png'
+				imgSrc: '/img/bundle.png'
 			}
 		},
 		mounted() {
 			this.updateTime(this.changeTime)
-			this.randomPic()
+			// this.randomPic()
 		},
 		methods: {
     		randomPic() {
@@ -62,7 +62,7 @@ isShowComments: true
 						imgShow.className="active";
 					}
 					this.imgSrc = '/znote/view/' + picList[Math.floor(Math.random() * picList.length)]
-					
+
 				}, 5000)
 			},
 
@@ -82,7 +82,7 @@ isShowComments: true
 	}
 </script>
 
-<style lang='stylus' scoped> 
+<style lang='stylus' scoped>
 	img{
 		opacity: 0;
 		transition: opacity 5s linear;
@@ -90,7 +90,7 @@ isShowComments: true
 	}
 	img.active{
 		opacity: 1;
-	} 
+	}
 	.content__default:not(.custom) img {
 	    max-width: 20% !important;
 	    margin-top: -10px;
@@ -132,7 +132,7 @@ isShowComments: true
 		-webkit-transform:rotate(360deg); /* Safari and Chrome */
 		-o-transform:rotate(360deg	); /* Opera */
 	}
-	
+
 	#tag {
 		width:100px;
 		height:100px;
@@ -144,7 +144,7 @@ isShowComments: true
 		-webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari and Chrome */
 		-o-transition:width 2s, height 2s, -o-transform 2s; /* Opera */
 	}
-	
+
 	#tag:hover {
 		width:100px;
 		height:100px;
@@ -153,7 +153,7 @@ isShowComments: true
 		-webkit-transform:rotate(360deg); /* Safari and Chrome */
 		-o-transform:rotate(360deg	); /* Opera */
 	}
-	
+
 	#category p,#tag p {
 		    margin: 0;
 		    padding-top: 35px;
@@ -161,11 +161,11 @@ isShowComments: true
 		    /*padding-right: 15px;*/
 		    font-size: 16px;
 	}
-	
+
 	#fj,#se {
 		margin-top: 27px;
 	}
-	
+
 	@media screen and (max-width: 960px){
 		.content__default:not(.custom) img {
 		    max-width: 35% !important;
@@ -198,7 +198,7 @@ isShowComments: true
 			-o-transform:rotate(360deg	); /* Opera */
 		}
 	}
-	
+
 	@media screen and (max-width: 360px){
 		#fj {
 			font-size: 12px;

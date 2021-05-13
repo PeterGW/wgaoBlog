@@ -22,6 +22,9 @@ module.exports = {
             children: [
                 'webpack/tree-sharking',
                 'webpack/plugins',
+                'webpack/modules',
+                'webpack/transform',
+                'webpack/babel',
             ]
         },
         {
@@ -29,7 +32,8 @@ module.exports = {
             collapsable: true,
             children: [
                 'vue/ssr',
-                'vue/vue-source'
+                'vue/vue-source',
+                'vue/vue-circle',
             ]
         },
         {
