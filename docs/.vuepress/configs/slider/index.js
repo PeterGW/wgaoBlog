@@ -2,14 +2,14 @@ module.exports = {
     '/views/': [
         '',
         {
-            title: '面试篇',
+            title: 'question',
             collapsable: true,
             children: [
                 'question/question',
             ]
         },
         {
-            title: 'JavaScript篇',
+            title: 'JavaScript',
             collapsable: true,
             children: [
                 'javascript/jsbase',
@@ -17,7 +17,14 @@ module.exports = {
             ]
         },
         {
-            title: 'webpack篇',
+            title: 'typescript',
+            collapsable: true,
+            children: [
+                'tsconfig/tsconfig',
+            ]
+        },
+        {
+            title: 'webpack',
             collapsable: true,
             children: [
                 'webpack/tree-sharking',
@@ -28,19 +35,12 @@ module.exports = {
             ]
         },
         {
-            title: 'vue篇',
+            title: 'vue',
             collapsable: true,
             children: [
                 'vue/ssr',
                 'vue/vue-source',
                 'vue/vue-circle',
-            ]
-        },
-        {
-            title: 'typescript篇',
-            collapsable: true,
-            children: [
-                'tsconfig/tsconfig',
             ]
         },
     ]
