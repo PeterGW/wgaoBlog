@@ -20,7 +20,8 @@
 - 重绘重排
 - position
 
-## part1
+<a href="https://q.shanyue.tech/base/http/363.html">http传送门</a>
+## vue
 - Vue的生命周期。✔
 - Create和beforeMount他们两之间有什么区别。
 - Vue组件通信。✔
