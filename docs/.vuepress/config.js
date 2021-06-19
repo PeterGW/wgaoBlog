@@ -14,11 +14,16 @@ module.exports = {
         nav:[ // 导航栏配置
             {text: 'home', link: '/' },
             {text: 'about', link: '/algorithm/'},
-            {text: 'github', link: 'https://baidu.com'}      
+            {text: 'github', link: 'https://baidu.com'}
         ],
         logo: '/assets/img/logo.png',
         sidebar
     },
-    configureWebpack: (config, isServer) => {
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@image': '/assets'
+            }
+        }
     }
 }
