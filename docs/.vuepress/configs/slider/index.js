@@ -14,6 +14,9 @@ module.exports = {
             children: [
                 'javascript/jsbase',
                 'javascript/promise',
+                'javascript/array',
+                'javascript/keep-alive',
+                'javascript/module语法与加载实现',
             ]
         },
         {
