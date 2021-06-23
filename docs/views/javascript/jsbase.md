@@ -103,5 +103,17 @@ console.log(num2); // "-26"
 最好的方法就是我们想办法规避掉这类小数计算时的精度问题就好了，那么最常用的方法就是将浮点数转化成整数计算。因为整数都是可以精确表示的。
 
 
+### 对象引用类型
+```js
+  // 创建false的一个Boolean对象
+  let falseObject = new Boolean(false); 
+  // 所有对象(有值)在布尔表达式中自动转为true
+  let result = falseObject && true;       // false
+```
+
+- slice()、substr()、substring()三个string类型的方法，
+    * 都接受两个参数，第一个参数表示开始的位置，
+    * 其中substr()第二个参数表示个数（返回子字符串），
+    * slice()、sbustring()方法第二个参数表示结束位置（不包含当前位置），三个方法不会修改他们的字符串
 
 
