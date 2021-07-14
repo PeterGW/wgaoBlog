@@ -106,7 +106,7 @@ console.log(num2); // "-26"
 ### 对象引用类型
 ```js
   // 创建false的一个Boolean对象
-  let falseObject = new Boolean(false); 
+  let falseObject = new Boolean(false);
   // 所有对象(有值)在布尔表达式中自动转为true
   let result = falseObject && true;       // false
 ```
@@ -116,4 +116,9 @@ console.log(num2); // "-26"
     * 其中substr()第二个参数表示个数（返回子字符串），
     * slice()、sbustring()方法第二个参数表示结束位置（不包含当前位置），三个方法不会修改他们的字符串
 
+### js异步执行 script标签中加载
+  defer会在文档解析完之后执行,并且多个defer会按照顺序执行,而async则是在js加载好之后就会执行,并且多个async,哪个加载好就执行哪个,同时出现的话，deffer优先级高
+
+    加载时间图：
+    ![example for vnode](../images/cnode2.png)
 
