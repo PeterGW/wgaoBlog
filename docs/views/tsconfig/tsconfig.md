@@ -1,4 +1,5 @@
 ### tsconfig.json配置项
+| 执行tsc init 命令初始化tsconfig
 ```js
 {
   "compilerOptions": {
