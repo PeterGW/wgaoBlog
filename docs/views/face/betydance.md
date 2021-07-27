@@ -41,7 +41,8 @@
 
 promise介绍
 then状态怎么改变
-怎么让捕获异常
+怎么让捕获异常，
+try...catch....显示
 
 闭包与普通函数区别   闭包怎么清除
 
@@ -65,7 +66,7 @@ webpack怎么依赖收集
 
 loader\plugin区别
 
-webpack流程
+webpack流程、怎么依赖收集
 
 tree-shaking做了什么操作
 
