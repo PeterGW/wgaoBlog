@@ -80,6 +80,30 @@ ts高级用法
 map weakMap set weakSet区别
 
 
+### 仙豆
 
+迭代器实现原理
 
+变量提升，输出结果
 
+原型链
+
+Vue源码、Vue watcher是什么时候创建的
+
+Http
+
+for.   for in区别
+
+数组交集
+
+Rolup打包排除第三方引用怎么配置
+
+浏览器回收机制
+
+Map set weakmap weakset
+
+浅拷贝深拷贝
+
+怎么生成render函数
+
+promise怎么终止或者取消
